@@ -1,0 +1,310 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>General Information - Charity Run 2024</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                background-color: rgba(255, 0, 30, 0.286);
+                color: #333;
+                line-height: 1.6;
+                overflow-x: hidden; /* Ngăn chặn cuộn ngang */
+            }
+
+            header {
+                position: relative;
+                text-align: center;
+                color: #fff;
+            }
+
+            .header-background {
+                background-image: url(R.jfif); /* Thay đổi hình nền */
+                background-size: cover;
+                background-position: center;
+                padding: 100px 20px; /* Tăng không gian cho phần tiêu đề */
+                box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng */
+            }
+
+            header h1 {
+                font-size: 4rem; /* Tăng kích thước chữ */
+                margin: 0;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Hiệu ứng đổ bóng cho chữ */
+            }
+
+            header h2 {
+                font-size: 2.5rem;
+                margin-top: 10px;
+                font-weight: 300;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Hiệu ứng đổ bóng cho chữ */
+            }
+
+            header p {
+                font-size: 1.5rem;
+                margin-top: 15px;
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Hiệu ứng đổ bóng cho chữ */
+            }
+
+            nav {
+                background-color: #fff;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+            }
+
+            nav ul li {
+                margin: 0 20px;
+            }
+
+            nav ul li a {
+                text-decoration: none;
+                color: #ff6f61; /* Màu giống tiêu đề */
+                font-weight: bold;
+                transition: color 0.3s ease, transform 0.3s ease;
+            }
+
+            nav ul li a:hover {
+                color: #e65c55; /* Màu khi hover */
+                transform: scale(1.1); /* Phóng to nhẹ khi hover */
+            }
+
+            .cta-button {
+                background-color: #ff6f61;
+                color: white;
+                padding: 15px 30px;
+                border-radius: 5px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+            .cta-button:hover {
+                background-color: #e65c55;
+                transform: scale(1.05);
+            }
+
+            main {
+                padding: 30px;
+                text-align: center;
+                max-width: 800px;
+                margin: 20px auto;
+                background-color: #fff; /* Màu nền trắng cho phần chính */
+                border-radius: 10px;
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                transition: transform 0.3s ease;
+            }
+
+            main:hover {
+                transform: translateY(-2px);
+            }
+
+            h2 {
+                color: #ff6f61; /* Màu tiêu đề giống trang index */
+            }
+
+            .transport-icon {
+                width: 50px;
+                vertical-align: middle;
+                margin-right: 10px;
+            }
+
+            .sponsor-logo {
+                width: 150px;
+                height: auto;
+                margin: 10px;
+            }
+
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 20px 0;
+                position: relative;
+            }
+
+            footer a {
+                color: #ff6f61; /* Màu liên kết giống trang index */
+                text-decoration: none;
+            }
+
+            footer a:hover {
+                text-decoration: underline;
+            }
+
+            /* #countdown {
+                text-align: center;
+                background-color: #fff3e0;
+                padding: 30px;
+                border-radius: 10px;
+                margin-top: 30px;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            } */
+
+            #countdown {
+                text-align: center;
+                background-color: #ffe6e6;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            }
+
+            #timer {
+                font-size: 1.5rem;
+                font-weight: bold;
+                display: flex;
+                justify-self: center;
+                gap: 10px;
+            }   
+
+            #timer span {
+                display: inline-block;
+                padding: 10px 15px;
+                border: 2px solid #ff6f61;
+                border-radius: 5px;
+                background-color: white;
+                font-size: 1.5rem;
+                font-weight: bold;
+                transition: background-color 0.3s ease, transform 0.3s ease;
+            }
+
+            #timer span:hover {
+                background-color: #ff6f61;
+                color: white;
+                transform: scale(1.05);
+            }
+
+            
+            @media (max-width: 768px) {
+                header {
+                    padding: 40px 20px;
+                }
+
+                header h1 {
+                    font-size: 2.5rem;
+                }
+
+                main {
+                    margin: 10px;
+                }
+
+                #countdown {
+                    margin: 10px;
+                    padding: 20px;
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="navbar">
+            <nav>
+                <div style="display: flex; align-items: center; justify-content: space-between;">
+                    <a href="index.html">
+                        <img src="gorun.jfif" alt="Run event logo" style="width: 100px; height: auto;">
+                    </a>
+                    <ul style="list-style: none; display: flex; justify-content: space-between; width: 100%; margin: 0; padding: 0;">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="program.html">Event Program</a></li>
+                        <li><a href="info.html">General Information</a></li>
+                        <li><a href="participation.html">Participation Information</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <header>
+            <div class="header-background">
+                <h1>Charity Run 2024</h1>
+                <h2>Run for Health, Join Hands for the Community</h2>
+                <p>Join us on <strong>October 14, 2024</strong>, at <strong>SECC, Ho Chi Minh City!</strong></p>
+            </div>
+        </header>
+        
+
+        
+
+        <main>
+            <h2>Join Us for a Great Cause!</h2>
+            <p>The event will take place at <strong>SECC</strong>, Saigon Exhibition and Convention Center, Ho Chi Minh City.</p>
+            <p><strong>Address:</strong> 799 Nguyen Van Linh, District 7, Ho Chi Minh City.</p>
+            <p>
+                <a href="https://www.google.com/maps/place/799+%C4%90.+Nguy%E1%BB%85n+V%C4%83n+Linh,+Khu+%C4%91%C3%B4+th%E1%BB%8B+Ph%C3%BA+M%E1%BB%B9+H%C6%B0ng,+Qu%E1%BA%ADn+7,+H%E1%BB%93+Ch%C3%AD+Minh/@10.7333094,106.7229784,17z/data=!4m6!3m5!1s0x31752f8806df111f:0x32a37c07c2ef0bca!8m2!3d10.7332732!4d106.7230186!16s%2Fg%2F11rv5glpvs?entry=ttu&g_ep=EgoyMDI0MTAwNS4yIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <img src="Ảnh chụp màn hình 2024-10-09 181757.png" alt="map" style="width: 100%; max-width: 600px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
+                </a>
+            </p>
+        </main>
+        <main>
+
+            <h2>Means of Transport:</h2>
+            <p>
+                <img src="bus.jfif" alt="Bus" class="transport-icon"> 
+                <strong>Bus:</strong> Bus routes to SECC include 72, 102, and 139.
+            </p>
+            <p>
+                <img src="car.jpg" alt="Car" class="transport-icon"> 
+                <strong>Car:</strong> There is ample parking available at SECC.
+            </p>
+
+            <h2>Sponsors and Partners:</h2>
+            <p>We are proud to partner with leading companies:</p>
+            <div>
+                <img src="vng.png" alt="ABC Corp" class="sponsor-logo">
+                <img src="redbull.jfif" alt="XYZ Company" class="sponsor-logo">
+                <img src="samsung.jfif" alt="Other Sponsor" class="sponsor-logo">
+            </div>
+        </main>
+
+        <div id="countdown" style="padding: 20px; text-align: center; margin-top: 20px;">
+            <h2 style="font-size: 2.5rem; color: #ff6f61;">Time Left Until Charity Run 2024</h2>
+            <div id="timer" style="font-size: 1.5rem; display: flex; justify-content: center; gap: 10px;">
+                <span id="days">00</span> Days
+                <span id="hours">00</span> Hours
+                <span id="minutes">00</span> Minutes
+                <span id="seconds">00</span> Se conds
+            </div>
+        </div>
+
+        <script>
+            // Countdown Timer Script
+            var eventDate = new Date("October 30, 2024 24:00:00").getTime();
+
+            var countdownFunction = setInterval(function() {
+                var now = new Date().getTime();
+                var timeLeft = eventDate - now;
+
+                var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("days").innerHTML = days;
+                document.getElementById("hours").innerHTML = hours;
+                document.getElementById("minutes").innerHTML = minutes;
+                document.getElementById("seconds").innerHTML = seconds;
+
+                if (timeLeft < 0) {
+                    clearInterval(countdownFunction);
+                    document.getElementById("timer").innerHTML = "The event has started!";
+                }
+            }, 1000);
+        </script>
+
+        <footer>
+            <p>&copy; 2024 Charity Run | Contact: <a href="mailto:info@charityrun.com">info@charityrun.com</a></p>
+        </footer>
+    </body>
+    </html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            background-image: url(R.jfif) ;
+            background-color: #fff5f5; /* Light background color */
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .thankyou-container {
+            background-color: #ff6f61; /* Main color from logo */
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-out;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .details {
+            background-color: white;
+            color: #333;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .details p {
+            margin: 10px 0;
+            font-size: 1.2rem;
+        }
+
+        .details p strong {
+            color: #ff6f61; /* Use the main color for emphasis */
+        }
+
+        .back-button {
+            background-color: white;
+            color: #ff6f61;
+            padding: 15px 30px;
+            margin-top: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+
+        .back-button:hover {
+            background-color: #ffe6e6;
+            transform: scale(1.05);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h2 {
+                font-size: 2rem;
+            }
+            .details p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="thankyou-container">
+        <h2>Congratulation...!!!</h2>
+        <div class="details">
+            <p><strong>Name:</strong> <span id="name"></span></p>
+            <p><strong>Email:</strong> <span id="email"></span></p>
+            <p><strong>Interested Event:</strong> <span id="event"></span></p>
+            <p><strong>Detailed Enquiry:</strong> <span id="enquiry"></span></p>
+        </div>
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        document.getElementById("name").textContent = params.get("name");
+        document.getElementById("email").textContent = params.get("email");
+        document.getElementById("event").textContent = params.get("event");
+        document.getElementById("enquiry").textContent = params.get("enquiry");
+    </script>
+
+</body>
+</html>

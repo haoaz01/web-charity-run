@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Charity Run 2024</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+
+        img {
+            width: 100px;
+            height: 75px;
+        }
+
+        .navbar {
+            background-color: #ffffff; /* White background for the navbar */
+            padding: 10px 0; /* Padding for spacing */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ff6f61; /* Main color from logo */
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e65c55; /* Darker shade on hover */
+            transform: scale(1.1); /* Scale effect */
+        }
+
+        body {
+            background-image: url(R.jfif);
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f7f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            transition: transform 0.3s ease; /* Lift effect on hover */
+        }
+
+        section:hover {
+            transform: translateY(-5px); /* Slight lift on hover */
+        }
+
+        h2 {
+            color: #ff6f61;
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+            display: block;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1rem;
+            transition: border 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border: 1px solid #ff6f61; /* Change border color on focus */
+            outline: none; /* Remove default outline */
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e95c50;
+        }
+
+        #countdown {
+            text-align: center;
+            background-color: #ffe6e6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        #timer {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }   
+
+        #timer span {
+            display: inline-block;
+            padding: 10px 15px;
+            border: 2px solid #ff6f61;
+            border-radius: 5px;
+            background-color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #timer span:hover {
+            background-color: #ff6f61;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+
+        #resultBox {
+            display: none;
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff3e0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+        #resultBox h2 {
+            color: #ff6f61;
+            margin-top: 0;
+        }
+
+        #resultBox p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        /* Animation for countdown */
+        section, #countdown, footer {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header {
+                padding: 40px 20px;
+            }
+
+            section {
+                margin: 10px;
+                padding: 20px;
+            }
+
+            #countdown {
+                margin: 10px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <a href="index.html">
+                    <img src="gorun.jfif" alt="Run event logo" style="width: 100px; height: auto;">
+                </a>
+                <ul style="list-style: none; display: flex; justify-content: space-between; width: 100%; margin: 0; padding: 0;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="program.html">Event Program</a></li>
+                    <li><a href="info.html">General Information</a></li>
+                    <li><a href="participation.html">Participation Information</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+
+    <section>
+        <h2>Leave Your Message</h2>
+        <!-- Thông báo lỗi xuất hiện ở trên biểu mẫu -->
+        <p id="errorMessage" style="display:none; color: red; font-weight: bold;">Please enter the values!</p>
+        <form id="contactForm" onsubmit="return handleSubmit(event)">
+            <div>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your full name" >
+            </div>
+            <div>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Your email address" >
+            </div>
+            <div>
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone number" >
+            </div>
+            <div>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Your message" ></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="thankYouMessage" style="display:none; color: green; font-weight: bold;">Thank you for your message! We will get back to you soon.</p>
+    </section>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+    
+            // Lấy thông tin từ biểu mẫu
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+    
+            // Kiểm tra nếu các trường không được nhập
+            if (!name || !email || !phone || !message) {
+            // Tạo hộp thoại cảnh báo (alert box)
+            alert("Please enter the values!");
+            return false;
+        }
+    
+            // Ẩn thông báo lỗi
+            document.getElementById('errorMessage').style.display = 'none';
+    
+            // Hiển thị thông báo cảm ơn
+            document.getElementById('thankYouMessage').style.display = 'block';
+    
+            // Ghi thông tin vào console
+            console.log('Name: ' + name);
+            console.log('Email: ' + email);
+            console.log('Phone: ' + phone);
+            console.log('Message: ' + message);
+    
+            // Xóa dữ liệu biểu mẫu
+            document.getElementById('contactForm').reset();
+        }
+    </script>
+    
+        
+    
+    <div id="countdown">
+        <h2>Countdown to the Event</h2>
+        <div id="timer">
+            <span id="days">00</span> Days 
+            <span id="hours">00</span> Hours 
+            <span id="minutes">00</span> Minutes 
+            <span id="seconds">00</span> Seconds
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Charity Run. All rights reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        // Countdown timer script
+        const eventDate = new Date('2024-10-30 24:00:00').getTime();
+
+        const countdownFunction = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = eventDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days;
+            document.getElementById("hours").innerText = hours;
+            document.getElementById("minutes").innerText = minutes;
+            document.getElementById("seconds").innerText = seconds;
+
+            if (distance < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("timer").innerText = "The event has started!";
+            }
+        }, 1000);
+
+    </script>
+</body>
+</html>
+
+

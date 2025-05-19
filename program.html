@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Charity Run 2024 - Run for health, join hands for the community. Join on October 11, 2024 at SECC, Ho Chi Minh City.">
+    <title>Charity Run 2024 - Run for a Better Future</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        img {
+            width: 150px;
+            height: 100px;
+        }
+        .navbar {
+            background-color: #ffffff; /* White background for the navbar */
+            padding: 10px 0; /* Padding for spacing */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ff6f61; /* Main color from logo */
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e65c55; /* Darker shade on hover */
+            transform: scale(1.1); /* Scale effect */
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: rgba(255, 0, 30, 0.286);
+            color: #333;
+            margin: 0;  
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .purpose-section {
+            background-color: #ffe6e6;
+            border: 2px solid #ff6f61;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .purpose-title {
+            font-size: 2.5rem;
+            color: #ff6f61;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .purpose-description {
+            font-size: 1.2rem;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        nav {
+            background-color: #fff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ff6f61;
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e65c55;
+            transform: scale(1.1);
+        }
+
+        .banner {
+            background-image: url(R.jfif); /* Sử dụng hình ảnh banner */
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .banner h2 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .cta-button {
+            background-color: #ff6f61;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background-color: #e65c55;
+            transform: scale(1.05);
+        }
+
+        main {
+            padding: 40px; /* Tăng padding lên để tạo không gian hơn */
+            text-align: center;
+            max-width: 1000px; /* Tăng max-width để phần tử rộng hơn */
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        #countdown {
+            background-color: #ffe6e6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #timer {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        #timer span {
+            display: inline-block;
+            padding: 10px 15px;
+            border: 2px solid #ff6f61;
+            border-radius: 5px;
+            background-color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #timer span:hover {
+            background-color: #ff6f61;
+            color: white;
+            transform: scale(1.05);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .banner h2 {
+                font-size: 2rem;
+            }
+
+            main {
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <nav>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <a href="index.html">
+                    <img src="gorun.jfif" alt="Run event logo" style="width: 100px; height: auto;">
+                </a>
+                <ul style="list-style: none; display: flex; justify-content: space-between; width: 100%; margin: 0; padding: 0;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="program.html">Event Program</a></li>
+                    <li><a href="info.html">General Information</a></li>
+                    <li><a href="participation.html">Participation Information</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    
+
+    <header>
+        <h1>Charity Run 2024</h1>
+        <p>Run for health, join hands for the community. Join us on October 11, 2024, at SECC Exhibition and Convention Center, Ho Chi Minh City!</p>
+        <p><strong>Place:</strong> SECC - Saigon Exhibition and Convention Center, Ho Chi Minh City</p>            
+    </header>
+
+    <div class="banner" style="display: flex; flex-direction: column; align-items: center;">
+        <h2>Run to Raise Funds, Let's Take Action Together</h2>
+        <p><a href="enquiry.html" class="cta-button">Join Now</a></p>
+    </div>
+
+    <main>
+        <main>
+            <div class="event-information"> <!-- Lớp riêng cho Event Information -->
+                <section style= padding: 40px; margin: 10px 0; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); transition: transform 0.3s;">
+                    <div style="display: flex; justify-content: space-between; align-items: flex-start; max-width: 1200px; margin: 0 auto;">
+                        <div style="text-align: left; max-width: 60%;">
+                            <h2 style="text-align: left; font-size: 2.5rem; margin-bottom: 20px; color: #ff6f61;">Event Information</h2>
+                            <p style="text-align: left; font-size: 1.1rem; margin-bottom: 20px;">
+                                The goal of this event is to raise awareness and funds for the community.<br> Date: <strong>October 14, 2024. </strong><br>Place:<strong> SECC Exhibition and Convention Center, Ho Chi Minh City!</strong>.
+                            </p>
+                            <p style="text-align: left;">
+                                <a href="participation.html" class="cta-button" style="background-color: #ff6f61; color: #fff; padding: 12px 25px; border-radius: 5px; text-decoration: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: background-color 0.3s ease, transform 0.3s ease;">Learn More About How to Participate</a>
+                            </p>
+                        </div>
+                        <a href="place.jfif" style="text-align: right;">
+                            <img src="place.jfif" alt="run" style="width: 400px; height: auto; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+
+        <main>
+            <section class="purpose-section" style="padding: 40px; margin: 20px 0; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+                <h2 class="purpose-title" style="font-size: 2rem; margin-bottom: 20px;">
+                    <i class="fas fa-heart"></i> Purpose
+                </h2>
+                <p style="font-size: 1.1rem;">This event aims to raise funds for flood-affected areas and foster community spirit.</p>
+                
+                <!-- Thêm hình ảnh vào đây -->
+                <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                    <img src="purpose1.jpg" alt="Image 1" style="width: 48%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+                    <img src="purpose2.jfif" alt="Image 2" style="width: 48%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+                </div>
+            </section>
+        </main>
+
+        <h2>Event Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Activities</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>06:00 - 07:00</strong></td>
+                    <td>Participant Check-in and Preparation</td>
+                </tr>
+                <tr>
+                    <td><strong>07:00 - 08:30</strong></td>
+                    <td>5km and 10km Race</td>
+                </tr>
+                <tr>
+                    <td><strong>09:00 - 10:00</strong></td>
+                    <td>Award Ceremony and Musical Performances</td>
+                </tr>
+            </tbody>
+        </table>
+            
+        <section style="background-color: #fff; padding: 40px; margin: 20px 0; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);">
+            <h2 style="font-size: 2.5rem; color: #ff6f61; text-align: center; margin-bottom: 20px;">Activities Besides the Run</h2>
+            <p style="font-size: 1.1rem; text-align: center; margin-bottom: 20px;">
+                Besides the run, enjoy a variety of exciting activities throughout the event:
+            </p>
+            <ul style="list-style-type: none; padding: 0; text-align: center;">
+                <li style="margin-bottom: 15px;">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="music.jfif" alt="Music" style="width: 50px; height: auto; margin-right: 10px;">
+                        <strong>Musical Performances:</strong> Live bands and singers will entertain participants throughout the day.
+                    </div>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="booth.png" alt="Booths" style="width: 50px; height: auto; margin-right: 10px;">
+                        <strong>Sponsor Booths:</strong> Visit our sponsor booths to learn about new products, services, and special offers.
+                    </div>
+                </li>
+                <li style="margin-bottom: 15px;">
+                    <div style="display: flex; align-items: center; justify-content: center;">
+                        <img src="food.png" alt="Food" style="width: 50px; height: auto; margin-right: 10px;">
+                        <strong>Food Stalls:</strong> Savor delicious snacks and meals from a variety of food vendors available at the event.
+                    </div>
+                </li>
+            </ul>
+        </section>
+        
+        
+    </main>
+
+    <div id="countdown" style="padding: 20px; text-align: center; margin-top: 20px;">
+        <h2 style="font-size: 2.5rem; color: #ff6f61;">Time Left Until Charity Run 2024</h2>
+        <div id="timer" style="font-size: 1.5rem; display: flex; justify-content: center; gap: 10px;">
+            <span id="days">00</span> Days
+            <span id="hours">00</span> Hours
+            <span id="minutes">00</span> Minutes
+            <span id="seconds">00</span> Seconds
+        </div>
+    </div>
+
+    <script>
+        // Countdown timer script
+        var eventDate = new Date("October 30, 2024 24:00:00").getTime();
+
+        var countdownFunction = setInterval(function () {
+            var now = new Date().getTime();
+            var timeLeft = eventDate - now;
+
+            var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            if (timeLeft < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("timer").innerHTML = "The event has started!";
+            }
+        }, 1000);
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Charity Run. All rights reserved.</p>
+        <p>For more information, <a href="contact.html">contact us</a>.</p>
+    </footer>
+</body>
+</html>

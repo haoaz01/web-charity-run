@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About us - Charity Run 2024">
+    <title>About us - Charity Run 2024</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+
+        img {
+        
+            width: 100px;
+            
+            height: 75px;
+        
+        }    
+        
+        .navbar {
+            background-color: #ffffff; /* White background for the navbar */
+            padding: 10px 0; /* Padding for spacing */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); Light ;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ff6f61; /* Main color from logo */
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e65c55; /* Darker shade on hover */
+            transform: scale(1.1); /* Scale effect */
+        }
+        
+        body {
+            background-image: url(R.jfif);
+            font-family: 'Roboto', sans-serif;
+            background-color:  rgba(255, 0, 30, 0.286); /* Light background color */
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .banner {
+        background-image:url(R.jfif); /* Use your image */
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        position: relative;
+        background-size: cover; /* Ensures the image covers the entire area */
+        background-position: center; /* Centers the image */
+        }
+
+        .banner h2 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        header {
+            background-color: #ff6f61; /* Header background color */
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Text shadow effect */
+        }
+
+        section {
+            padding: 30px;
+            margin: 20px auto;
+            background-color: #fff; /* White background for content section */
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            transition: transform 0.3s ease; /* Hover effect */
+        }
+
+        section:hover {
+            transform: translateY(-2px); /* Slightly raise on hover */
+        }
+
+        h2 {
+            color: #ff6f61; /* Subheading color */
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        p,
+        ul {
+            margin: 20px 0;
+            font-size: 1.1rem;
+            text-align: justify;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        ul li a {
+            color: #ff6f61; /* Link color */
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        ul li a:hover {
+            color: #333; /* Color on hover */
+            text-decoration: underline;
+        }
+
+        #countdown {
+            background-color: #ffe6e6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #timer {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        #timer span {
+            display: inline-block;
+            padding: 10px 15px;
+            border: 2px solid #ff6f61;
+            border-radius: 5px;
+            background-color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #timer span:hover {
+            background-color: #ff6f61;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333; /* Footer background color */
+            color: #fff;
+            text-align: center; /* Center the text */
+            padding: 20px 0;
+            margin-top: 30px;
+            box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0; /* Remove margin for footer paragraph */
+            text-align: center; /* Center the text */
+        }
+
+        footer a {
+            color: #ff6f61; /* Link color in footer */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fff; /* Change color on hover */
+        }
+
+        /* Scroll animation effect */
+        section,
+        #countdown,
+        footer {
+            animation: fadeIn 1s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                margin: 10px;
+                padding: 20px;
+            }
+
+            #countdown {
+                margin: 10px;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <nav>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <a href="index.html">
+                    <img src="gorun.jfif" alt="Run event logo" style="width: 100px; height: auto;">
+                </a>
+                <ul style="list-style: none; display: flex; justify-content: space-between; width: 100%; margin: 0; padding: 0;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="program.html">Event Program</a></li>
+                    <li><a href="info.html">General Information</a></li>
+                    <li><a href="participation.html">Participation Information</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <header>
+        <h1>About Us</h1>
+    </header>
+
+    <section>
+        <h2>Organizer Information</h2>
+        <p>We are a professional non-profit organization that organizes charity events focused on education and community health. Our mission is to create a healthier, more supportive community by promoting fitness and well-being while giving back to those in need.</p>
+
+        <h2>Contact</h2>
+        <p>Phone: +84 123 456 789</p>
+
+        <h2>Social Networks</h2>
+        <ul>
+            <li><a href="https://www.facebook.com/events/377567008406080?_rdr"><i class="fab fa-facebook-square"></i> Facebook</a></li>
+            <li><a href="https://www.instagram.com/therunningcharity/?hl=vi"><i class="fab fa-instagram"></i> Instagram</a></li>
+        </ul>
+    </section>
+
+    <div id="countdown" style="padding: 20px; text-align: center; margin-top: 20px;">
+        <h2 style="font-size: 2.5rem; color: #ff6f61;">Time Left Until Charity Run 2024</h2>
+        <div id="timer" style="font-size: 1.5rem; display: flex; justify-content: center; gap: 10px;">
+            <span id="days">00</span> Days
+            <span id="hours">00</span> Hours
+            <span id="minutes">00</span> Minutes
+            <span id="seconds">00</span> Seconds
+        </div>
+    </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Charity Run | Contact: <a href="mailto:info@charityrun.com">info@charityrun.com</a></p>
+    </footer>
+
+    <script>
+        // Countdown timer script
+        var eventDate = new Date("October 30, 2024 24:00:00").getTime();
+
+        var countdownFunction = setInterval(function () {
+            var now = new Date().getTime();
+            var timeLeft = eventDate - now;
+
+            var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            if (timeLeft < 0) {
+                clearInterval(countdownFunction);
+                document.getElementById("timer").innerHTML = "The event has started!";
+            }
+        }, 1000);
+    </script>
+</body>
+
+</html>

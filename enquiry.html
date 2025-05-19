@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Enquiry Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        img {
+            width: 100px;
+            height: 75px;
+        }
+
+        .navbar {
+            background-color: #ffffff; /* White background for the navbar */
+            padding: 10px 0; /* Padding for spacing */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #ff6f61; /* Main color from logo */
+            font-weight: bold;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e65c55; /* Darker shade on hover */
+            transform: scale(1.1); /* Scale effect */
+        }
+        
+        body {
+            background-image: url(R.jfif);
+            background-size: cover;
+            background-position: center;
+            font-family: 'Roboto', sans-serif;
+            background-color: rgba(255, 0, 30, 0.286);
+            color: #333;
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: #fff;
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin: 0;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #ff6f61;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1rem;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input[type="submit"] {
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            padding: 12px;
+            font-size: 1.1rem;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e95c50;
+        }
+
+        #resultBox {
+            display: none;
+            max-width: 600px;
+            margin: 30px auto;
+            background-color: #fff3e0;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: left;
+        }
+
+
+
+        .category {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .category label {
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .category div {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .category input[type="checkbox"] {
+            accent-color: #ff6f61;
+            width: 20px;
+            height: 20px;
+        }
+        
+        #resultBox h2 {
+            color: #ff6f61;
+            margin-top: 0;
+        }
+
+        #resultBox p {
+            font-size: 1rem;
+            color: #333;
+        }
+
+        #countdown {
+            background-color: #ffe6e6;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        #timer {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        #timer span {
+            display: inline-block;
+            padding: 10px 15px;
+            border: 2px solid #ff6f61;
+            border-radius: 5px;
+            background-color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        #timer span:hover {
+            background-color: #ff6f61;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer a {
+            color: #ff6f61;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <nav>
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+                <a href="index.html">
+                    <img src="gorun.jfif" alt="Run event logo" style="width: 100px; height: auto;">
+                </a>
+                <ul style="list-style: none; display: flex; justify-content: space-between; width: 100%; margin: 0; padding: 0;">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="program.html">Event Program</a></li>
+                    <li><a href="info.html">General Information</a></li>
+                    <li><a href="participation.html">Participation Information</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <header>
+        <h1>Event Enquiry Form</h1>
+    </header>
+
+    <form name="enquiryForm" onsubmit="return validateForm()">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" >
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" >
+
+        <label for="event">Interested Event:</label>
+        <select id="event" name="event" >
+            <option value="">--Select Event--</option>
+            <option value="5KM Run">5KM Run</option>
+            <option value="10KM Run">10KM Run</option>
+            <option value="Volunteering">Volunteering</option>
+            <option value="Sponsor">Sponsor</option>
+        </select>
+        <div class ="category">
+        <label for="category">Category of Enquiry:</label>
+        <div>
+            <input type="checkbox" id="to_join" name="join" value="Join">
+            <label for="to_join">To Join</label>
+        </div>
+        <div>
+            <input type="checkbox" id="event_activities" name="activities" value="Event Activities">
+            <label for="event_activities">Event Activities</label>
+        </div>
+        <div>
+            <input type="checkbox" id="registration_fees" name="category" value="Registration Fees">
+            <label for="registration_fees">Registration Fees</label>
+        </div>
+        <div>
+            <input type="checkbox" id="rules_guidelines" name="rules&guidelines" value="Rules & Guidelines">
+            <label for="rules_guidelines">Rules & Guidelines</label>
+        </div>
+        </div>
+
+        <label for="enquiry">Detailed Enquiry:</label>
+        <textarea id="enquiry" name="enquiry" rows="5" placeholder="Write your enquiry..."></textarea>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="resultBox">
+        <h2>Thank you for your enquiry!</h2>
+        <p><strong>Name:</strong> <span id="resultName"></span></p>
+        <p><strong>Email:</strong> <span id="resultEmail"></span></p>
+        <p><strong>Interested Event:</strong> <span id="resultEvent"></span></p>
+        <p><strong>Category of Enquiry:</strong> <span id="resultCategory"></span></p>
+        <p><strong>Detailed Enquiry:</strong> <span id="resultEnquiry"></span></p>
+    </div>
+
+    <div id="countdown" style="padding: 20px; text-align: center; margin-top: 20px;">
+        <h2 style="font-size: 2.5rem; color: #ff6f61;">Time Left Until Charity Run 2024</h2>
+        <div id="timer" style="font-size: 1.5rem; display: flex; justify-content: center; gap: 10px;">
+            <span id="days">00</span> Days
+            <span id="hours">00</span> Hours
+            <span id="minutes">00</span> Minutes
+            <span id="seconds">00</span> Seconds
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Charity Run. All rights reserved. <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+
+    <script>
+    function validateForm() {
+        const name = document.forms["enquiryForm"]["name"].value;
+        const email = document.forms["enquiryForm"]["email"].value;
+        const event = document.forms["enquiryForm"]["event"].value;
+        const enquiry = document.forms["enquiryForm"]["enquiry"].value;
+
+        if (!name || !email || !event || !enquiry) {
+            alert("PLEASE ENTER THE VALUES!");
+            return false;
+        }
+
+        // Chuyển hướng đến trang cảm ơn với các giá trị từ biểu mẫu
+        window.location.href = `thankyou.html?name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&event=${encodeURIComponent(event)}&enquiry=${encodeURIComponent(enquiry)}`;
+        return false;
+    }
+
+
+
+        function startCountdown() {
+            const eventDate = new Date("2024-10-30 24:00:00").getTime();
+
+            const interval = setInterval(function() {
+                const now = new Date().getTime();
+                const timeLeft = eventDate - now;
+
+                const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                document.getElementById("days").textContent = days + "d";
+                document.getElementById("hours").textContent = hours + "h";
+                document.getElementById("minutes").textContent = minutes + "m";
+                document.getElementById("seconds").textContent = seconds + "s";
+
+                if (timeLeft < 0) {
+                    clearInterval(interval);
+                    document.getElementById("timer").textContent = "The event has started!";
+                }
+            }, 1000);
+        }
+
+        startCountdown();
+    </script>
+</body>
+</html>
+
